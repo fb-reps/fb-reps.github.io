@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bing Fan — Academic Homepage</title>
   <link rel="stylesheet" href="styles.css">
   <meta name="description" content="Personal homepage of Bing Fan — research, publications, and contact.">
@@ -43,7 +43,7 @@
 
   <main class="container">
 
-    <section id="about" class="card">
+    <section id="about" class="card visible">
       <h2>About</h2>
       <p>I am a Ph.D. student in Computer Science and Engineering at the University of North Texas (UNT), advised by Prof. Heng Fan. My research focuses on video understanding, multimedia forensics, and computer vision.</p>
       <p>I previously received an M.S. in Cyberspace Security from Nanchang University, China, advised by Prof. Feng Ding, and a B.S. in Software Engineering from Nanchang University, China.</p>
@@ -207,5 +207,19 @@
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+      document.querySelectorAll('.card, .publication-category').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
