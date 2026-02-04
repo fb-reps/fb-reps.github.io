@@ -1,0 +1,46 @@
+# Paper Links - Simple Format
+# Use this file to manage your publication links
+# Format: paper_url | code_url
+# Leave code_url empty if no code is available
+# Example: https://arxiv.org/abs/2025.12345 | https://github.com/user/repo
+
+# ==========================================
+# VIDEO UNDERSTANDING
+# ==========================================
+
+# Paper 1: Robust Ego-Exo Correspondence with Long-Term Memory (NeurIPS 2025)
+https://arxiv.org/abs/2510.11417 | https://github.com/juneyeeHu/LM-EEC
+
+# Paper 4: PRVQL: Progressive Knowledge-Guided Refinement for Robust Egocentric Visual Query Localization (ICCV 2025)
+https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_PRVQL_Progressive_Knowledge-guided_Refinement_for_Robust_Egocentric_Visual_Query_Localization_ICCV_2025_paper.pdf | https://github.com/fb-reps/PRVQL
+
+# Paper 8: OmniSTVG: Toward Spatio-Temporal Omni-Object Video Grounding (ICLR 2026)
+https://arxiv.org/abs/2503.10500 | https://github.com/JellyYao3000/OmniSTVG
+
+# ==========================================
+# MULTIMEDIA FORENSICS
+# ==========================================
+
+# Paper 2: Breaking Latent Prior Bias in Detectors for Generalizable AIGC Image Detection (NeurIPS 2025)
+https://arxiv.org/pdf/2506.00874 | 
+
+# Paper 3: VLForgery Face Triad: Detection, Localization and Attribution via Multimodal Large Language Models (NeurIPS 2025)
+https://arxiv.org/pdf/2503.06142 | 
+
+# Paper 5: Generating Higher-Quality Anti-Forensics DeepFakes with Adversarial Sharpening Mask (TOMM 2025)
+https://dl.acm.org/doi/full/10.1145/3729233 | 
+
+# Paper 6: Synthesizing Black-Box Anti-Forensics DeepFakes with High Visual Quality (ICASSP 2024)
+https://arxiv.org/abs/2312.10713 | https://github.com/fb-reps/Synthesizing-Black-box-Anti-forensics-DeepFakes-with-High-Visual-Quality
+
+# Paper 7: Securing Facial Bioinformation by Eliminating Adversarial Perturbations (IEEE TII 2022)
+https://ieeexplore.ieee.org/document/9866824 | 
+
+# ==========================================
+# INSTRUCTIONS FOR ADDING NEW PAPERS
+# ==========================================
+# 1. Add your paper figure to images/papers/paperX.png (where X is the next number)
+# 2. Add the paper entry below in the appropriate category
+# 3. Format: # Paper X: Title (Venue Year)
+# 4. paper_url | code_url (leave code_url empty if no code)
+# 5. Update index.html with the new publication information
