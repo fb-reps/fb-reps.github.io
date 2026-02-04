@@ -1,21 +1,39 @@
-Academic homepage scaffold
+# Bing Fan - Academic Homepage
 
-Files created:
-- index.html — Main page
-- styles.css — Styles
-- images/ — Placeholders for avatar and CV
+Personal academic homepage showcasing research, publications, and contact information.
 
-How to preview locally:
+## Website
 
-1. If you have Python 3 installed, run:
+Visit: [https://fb-reps.github.io](https://fb-reps.github.io)
 
-```bash
-python3 -m http.server 8000
+## Structure
+
+```
+fb-reps.github.io/
+├── index.html          # Main homepage
+├── styles.css          # Stylesheet
+├── BingFan_CV.pdf      # Curriculum Vitae
+├── images/
+│   ├── person.jpg      # Profile photo
+│   └── papers/         # Paper thumbnails
+│       ├── paper1.png
+│       ├── paper2.png
+│       └── ...
+└── README.md           # This file
 ```
 
-2. Open http://localhost:8000 in your browser.
+## Research Areas
 
-Next steps:
-- Replace placeholders (name, bio, projects, publications, email).
-- Add `images/avatar.jpg` and `cv.pdf` into the `images/` folder.
-- Optionally publish the repo with GitHub Pages.
+- Video Understanding
+- Multimedia Forensics
+- Computer Vision
+
+## Contact
+
+- Email: bingfan@my.unt.edu
+- LinkedIn: [bing-fan-a77881300](https://www.linkedin.com/in/bing-fan-a77881300/)
+- Google Scholar: [Bing Fan](https://scholar.google.com/citations?user=pcZrxOsAAAAJ&hl)
+
+## License
+
+© 2025 Bing Fan. All rights reserved.
