@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bing Fan — Academic Homepage</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <meta name="description" content="Personal homepage of Bing Fan — research, publications, and contact.">
 </head>
 <body>
@@ -198,6 +199,19 @@
       <p><strong>CV:</strong> <a href="BingFan_CV.pdf" target="_blank">Download PDF</a></p>
     </section>
 
+    <section id="visitor-map" class="card">
+      <h2>Visitor Map</h2>
+      <p>See where visitors to this page are located (approximate).</p>
+      <div class="visitor-stats">
+        <div class="visitor-count">
+          <span class="visitor-number" id="visitor-number">…</span>
+          <span class="visitor-label">Total visitors</span>
+        </div>
+      </div>
+      <div id="world-map" class="world-map"></div>
+      <p class="map-note">The number above is total page views. The map shows the world view; for a map with visitor locations by country, you can add a free tracker (e.g. <a href="https://clustrmaps.com" target="_blank" rel="noopener">ClustrMaps</a> or <a href="https://www.revolvermaps.com" target="_blank" rel="noopener">RevolverMaps</a>).</p>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -207,6 +221,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     (function() {
       var observer = new IntersectionObserver(function(entries) {
@@ -219,6 +234,38 @@
       document.querySelectorAll('.card, .publication-category').forEach(function(el) {
         observer.observe(el);
       });
+    })();
+
+    (function hashScroll() {
+      var hash = window.location.hash;
+      if (!hash) return;
+      var el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.classList.add('visible');
+        setTimeout(function() {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    })();
+
+    (function initMap() {
+      var mapEl = document.getElementById('world-map');
+      if (!mapEl) return;
+      var map = L.map('world-map', { scrollWheelZoom: false }).setView([20, 0], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      mapEl._leaflet = map;
+    })();
+
+    (function visitorCount() {
+      var el = document.getElementById('visitor-number');
+      if (!el) return;
+      var key = 'bingfan-homepage/visits';
+      fetch('https://api.countapi.xyz/hit/' + key)
+        .then(function(r) { return r.json(); })
+        .then(function(d) { el.textContent = d.value != null ? d.value.toLocaleString() : '—'; })
+        .catch(function() { el.textContent = '—'; });
     })();
   </script>
 </body>
