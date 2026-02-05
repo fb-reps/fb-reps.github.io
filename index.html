@@ -205,11 +205,12 @@
   <footer class="site-footer">
     <div class="container">
       <p>© Bing Fan. Built with a lightweight template.</p>
-      <p>Total visits: <span id="visitor-number">…</span></p>
+      <p>Total visits: <span id="busuanzi_value_site_pv">…</span></p>
       <p>Source: <a href="#">GitHub</a></p>
     </div>
   </footer>
 
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
     (function() {
       var observer = new IntersectionObserver(function(entries) {
@@ -236,15 +237,7 @@
       }
     })();
 
-    (function visitorCount() {
-      var el = document.getElementById('visitor-number');
-      if (!el) return;
-      var key = 'bingfan-homepage/visits';
-      fetch('https://api.countapi.xyz/hit/' + key)
-        .then(function(r) { return r.json(); })
-        .then(function(d) { el.textContent = d.value != null ? d.value.toLocaleString() : '—'; })
-        .catch(function() { el.textContent = '—'; });
-    })();
+    /* Visitor count: Busuanzi (works on GitHub Pages; no CORS). Script below fills #busuanzi_value_site_pv */
   </script>
 </body>
 </html>
