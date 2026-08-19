@@ -14,7 +14,7 @@ fb-reps.github.io/
 ├── styles.css          # Stylesheet
 ├── BingFan_CV.pdf      # Curriculum Vitae
 ├── images/
-│   ├── person.jpg      # Profile photo
+│   ├── person_v2.jpg   # Profile photo
 │   └── papers/         # Paper thumbnails
 │       ├── paper1.png
 │       ├── paper2.png
