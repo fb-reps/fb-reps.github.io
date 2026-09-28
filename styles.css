@@ -265,6 +265,20 @@ main {
   text-decoration: underline;
 }
 
+/* News */
+.new-badge {
+  font-size: 0.5em;
+  font-weight: 700;
+  font-style: italic;
+  color: #e60000;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.news-list li {
+  margin: 4px 0;
+}
+
 /* Publications */
 .publication-category {
   margin-top: 48px;
